@@ -13,11 +13,40 @@
  *   - perturbado: animal fica pulsando
  *   - instinto-selvagem: animal dá um salto e cresce, com uma borda vermelha
  */
-.agitado {}
+
+ @keyframes girando_Cabeca {
+   from { transform: rotate(150deg); }
+   to   { transform: rotate(-150deg); }
+ }
+
+ @keyframes piscando {
+   from { opacity: 1.0; }
+   to   { opacity: 0.5;}
+ }
+
+ @keyframes borda {
+   from {  }
+   to   { border: green; }
+ }
+
+ @keyframes pulando {
+   from { top: 0;      }
+   to   { top: -150px; }
+ }
+
+
+.agitado {
+  /*position: relative;
+  animation: pulando .5s ease-in-out 0s  alternate;*/
+  animation: girando_Cabeca 1s ease-in-out 0s infinite alternate;
+}
 .agitado img {}
 
-.alimentado {}
-.alimentado img {}
+.alimentado {
+  /*  animation: borda 1s ease-in-out 0s infinite alternate;*/
+}
+.alimentado img {
+}
 
 .perturbado {}
 .perturbado img {}
